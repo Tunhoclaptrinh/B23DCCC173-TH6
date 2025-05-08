@@ -155,7 +155,8 @@ export const getMockDestinations = (): DestinationManagement.Destination[] => {
 export const getMockSchedules = (): DestinationManagement.Schedule[] => {
 	return [
 		{
-			id: generateUUID(),
+			// id: generateUUID(),
+			id: '1234',
 			user_id: getMockUsers()[1].id, // Regular user's ID
 			name: 'Central Vietnam Trip',
 			start_date: '2023-10-15',
@@ -173,7 +174,8 @@ export const getMockScheduleDays = (): DestinationManagement.ScheduleDays[] => {
 	return [
 		{
 			id: generateUUID(),
-			schedule_id: mockSchedule.id,
+			// schedule_id: mockSchedule.id,
+			schedule_id: '1234',
 			day_number: 1,
 			date: '2023-10-15',
 		},

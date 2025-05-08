@@ -99,9 +99,12 @@ const CreateItineraryModal: React.FC<CreateItineraryModalProps> = ({ visible, on
 	};
 
 	// Save itinerary
+	// Sửa lại hàm handleSave để đảm bảo ID được tạo và liên kết đúng
 	const handleSave = async () => {
 		try {
 			const values = await form.validateFields();
+
+			// 1. Tạo schedule
 			const scheduleId = addSchedule({
 				...values,
 				start_date: selectedDates![0].format('YYYY-MM-DD'),
@@ -110,15 +113,21 @@ const CreateItineraryModal: React.FC<CreateItineraryModalProps> = ({ visible, on
 				status: 'planned',
 			});
 
-			// Add schedule items
-			itineraryDays.forEach((day, dayIndex) => {
-				day.destinations.forEach((dest, destIndex) => {
+			// 2. Lấy schedule days đã được tạo
+			const currentScheduleDays = scheduleDays.filter((day) => day.schedule_id === scheduleId);
+
+			// 3. Thêm items cho từng ngày
+			itineraryDays.forEach((dayData, index) => {
+				const currentDay = currentScheduleDays[index];
+				if (!currentDay) return;
+
+				dayData.destinations.forEach((dest, destIndex) => {
 					addScheduleItem({
-						schedule_day_id: scheduleId,
-						destination_id: dest.id, // Use the actual destination ID
-						order_in_day: destIndex + 1, // Set the order based on the index
-						estimated_transport_time: dest.avg_transport_time || 60, // Use destination's transport time or default
-						estimated_cost: dest.avg_accommodation_cost + dest.avg_food_cost + dest.avg_transport_cost, // Calculate total cost
+						schedule_day_id: currentDay.id, // Sử dụng ID thật từ scheduleDays
+						destination_id: dest.id,
+						order_in_day: destIndex + 1,
+						estimated_transport_time: dest.avg_transport_time || 60,
+						estimated_cost: dest.avg_accommodation_cost + dest.avg_food_cost + dest.avg_transport_cost,
 					});
 				});
 			});
@@ -127,6 +136,7 @@ const CreateItineraryModal: React.FC<CreateItineraryModalProps> = ({ visible, on
 			resetForm();
 			onSuccess();
 		} catch (error) {
+			console.error('Failed to save itinerary:', error);
 			message.error('Failed to save itinerary');
 		}
 	};

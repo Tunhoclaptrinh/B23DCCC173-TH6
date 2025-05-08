@@ -14,10 +14,18 @@ import {
 	Spin,
 	message,
 	Pagination,
+	Tooltip,
 } from 'antd';
-import { SearchOutlined, ClockCircleOutlined, DollarOutlined, PlusOutlined } from '@ant-design/icons';
+import {
+	SearchOutlined,
+	ClockCircleOutlined,
+	DollarOutlined,
+	PlusOutlined,
+	InfoCircleOutlined,
+} from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import { useModel } from 'umi';
+import DestinationDetail from './components/DestinationDetail';
 
 const { Title, Text, Paragraph } = Typography;
 const { Meta } = Card;
@@ -26,6 +34,8 @@ const { Option } = Select;
 const DestinationHomePage: React.FC = () => {
 	const { destinations, getDestinationData } = useModel('DestinationManagement.destination');
 	const [loading, setLoading] = useState(true);
+	const [selectedDestinationForDetail, setSelectedDestinationForDetail] = useState<any | null>(null);
+	const [isDetailModalVisible, setIsDetailModalVisible] = useState<boolean>(false);
 
 	// Filter states
 	const [searchText, setSearchText] = useState<string>('');
@@ -111,8 +121,16 @@ const DestinationHomePage: React.FC = () => {
 
 	const handleAddToItinerary = (destination: any) => {
 		message.success(`Added ${destination.name} to itinerary`);
-		// TODO: Implement actual itinerary logic
-		//////////////////////////////////////////////
+	};
+
+	const handleShowDestinationDetail = (destination: any) => {
+		setSelectedDestinationForDetail(destination);
+		setIsDetailModalVisible(true);
+	};
+
+	const handleCloseDestinationDetail = () => {
+		setIsDetailModalVisible(false);
+		// setSelectedDestinationForDetail(null); // Optionally clear, but DestinationDetail might need it while closing animation
 	};
 
 	return (
@@ -200,15 +218,11 @@ const DestinationHomePage: React.FC = () => {
 					{paginatedDestinations.map((destination: any) => (
 						<Col xs={24} sm={12} md={8} lg={6} key={destination.id}>
 							<Card
+								onClick={() => handleShowDestinationDetail(destination)}
 								hoverable
 								cover={
 									<img alt={destination.name} src={destination.image_url} style={{ height: 200, objectFit: 'cover' }} />
 								}
-								actions={[
-									<Button type='primary' onClick={() => handleAddToItinerary(destination)} icon={<PlusOutlined />}>
-										Add to Itinerary
-									</Button>,
-								]}
 							>
 								<Meta
 									title={
@@ -253,6 +267,16 @@ const DestinationHomePage: React.FC = () => {
 					))}
 				</Row>
 			)}
+
+			{/* lấy lại modal xem chi tiết địa điểm cho mỗi card */}
+			{selectedDestinationForDetail && (
+				<DestinationDetail
+					destination={selectedDestinationForDetail}
+					visible={isDetailModalVisible}
+					setVisible={setIsDetailModalVisible}
+				/>
+			)}
+
 			{/* Pagination */}
 			<div style={{ marginTop: '24px', textAlign: 'center' }}>
 				<Pagination
