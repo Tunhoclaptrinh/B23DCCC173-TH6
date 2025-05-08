@@ -1,0 +1,570 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn A",
+      "email": "nguyenvana@example.com",
+      "password": "$2a$10$xJWp1tPXm1Eu.Lw9vYff0OGwWZ5JZKlgHI3QjQK6tTWgY.LFhpZXS",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "name": "Trần Thị B",
+      "email": "tranthib@example.com",
+      "password": "$2a$10$NxE7rTjMO69Zj/KkVoJFpOyH1q14d.yB4zJ8d6KsJHDTpCHlB3qJ2",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "name": "Lê Văn C",
+      "email": "levanc@example.com",
+      "password": "$2a$10$gHuGsXR7kMM.KjEzNM.iU.QL5EJ/wKO6pBTAh40MwNm7FYT1R0UvK",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "name": "Admin",
+      "email": "admin@example.com",
+      "password": "$2a$10$zxE6wBTX7c9vX4E5JghN4uO2xKM53xV1QIKGpnwT8JXzFMFKBs0xG",
+      "role": "admin"
+    }
+  ],
+
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Vịnh Hạ Long",
+      "description": "Vịnh Hạ Long là kỳ quan thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi và hang động tuyệt đẹp.",
+      "type": "biển",
+      "image_url": "https://example.com/images/halong.jpg",
+      "avg_rating": 4.8,
+      "avg_food_cost": 350000,
+      "avg_transport_cost": 250000,
+      "avg_accommodation_cost": 1200000,
+      "estimated_visit_duration": 480
+    },
+    {
+      "id": 2,
+      "name": "Phố cổ Hội An",
+      "description": "Phố cổ Hội An là di sản văn hóa thế giới với kiến trúc cổ và không khí đặc trưng.",
+      "type": "thành phố",
+      "image_url": "https://example.com/images/hoian.jpg",
+      "avg_rating": 4.9,
+      "avg_food_cost": 300000,
+      "avg_transport_cost": 150000,
+      "avg_accommodation_cost": 800000,
+      "estimated_visit_duration": 360
+    },
+    {
+      "id": 3,
+      "name": "Sapa",
+      "description": "Sapa nổi tiếng với ruộng bậc thang, khung cảnh núi non hùng vĩ và văn hóa các dân tộc thiểu số.",
+      "type": "núi",
+      "image_url": "https://example.com/images/sapa.jpg",
+      "avg_rating": 4.7,
+      "avg_food_cost": 250000,
+      "avg_transport_cost": 300000,
+      "avg_accommodation_cost": 700000,
+      "estimated_visit_duration": 720
+    },
+    {
+      "id": 4,
+      "name": "Đà Lạt",
+      "description": "Thành phố ngàn hoa với khí hậu mát mẻ quanh năm, phong cảnh thiên nhiên tuyệt đẹp.",
+      "type": "núi",
+      "image_url": "https://example.com/images/dalat.jpg",
+      "avg_rating": 4.6,
+      "avg_food_cost": 280000,
+      "avg_transport_cost": 200000,
+      "avg_accommodation_cost": 650000,
+      "estimated_visit_duration": 420
+    },
+    {
+      "id": 5,
+      "name": "Phú Quốc",
+      "description": "Đảo ngọc với bãi biển cát trắng, nước biển xanh trong và hải sản tươi ngon.",
+      "type": "biển",
+      "image_url": "https://example.com/images/phuquoc.jpg",
+      "avg_rating": 4.5,
+      "avg_food_cost": 400000,
+      "avg_transport_cost": 350000,
+      "avg_accommodation_cost": 1500000,
+      "estimated_visit_duration": 540
+    },
+    {
+      "id": 6,
+      "name": "Huế",
+      "description": "Cố đô với nhiều di tích lịch sử, đền đài cung điện và ẩm thực đặc sắc.",
+      "type": "thành phố",
+      "image_url": "https://example.com/images/hue.jpg",
+      "avg_rating": 4.4,
+      "avg_food_cost": 220000,
+      "avg_transport_cost": 180000,
+      "avg_accommodation_cost": 600000,
+      "estimated_visit_duration": 390
+    },
+    {
+      "id": 7,
+      "name": "Nha Trang",
+      "description": "Thành phố biển với bãi biển đẹp, nhiều khu nghỉ dưỡng cao cấp và hoạt động giải trí phong phú.",
+      "type": "biển",
+      "image_url": "https://example.com/images/nhatrang.jpg",
+      "avg_rating": 4.3,
+      "avg_food_cost": 320000,
+      "avg_transport_cost": 220000,
+      "avg_accommodation_cost": 900000,
+      "estimated_visit_duration": 360
+    }
+  ],
+
+  "schedules": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "name": "Du lịch miền Bắc",
+      "start_date": "2025-06-10",
+      "end_date": "2025-06-15",
+      "total_budget": 15000000
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "name": "Khám phá miền Trung",
+      "start_date": "2025-07-20",
+      "end_date": "2025-07-25",
+      "total_budget": 18000000
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "name": "Nghỉ dưỡng Phú Quốc",
+      "start_date": "2025-08-05",
+      "end_date": "2025-08-08",
+      "total_budget": 10000000
+    }
+  ],
+
+  "scheduleDays": [
+    {
+      "id": 1,
+      "schedule_id": 1,
+      "day_number": 1
+    },
+    {
+      "id": 2,
+      "schedule_id": 1,
+      "day_number": 2
+    },
+    {
+      "id": 3,
+      "schedule_id": 1,
+      "day_number": 3
+    },
+    {
+      "id": 4,
+      "schedule_id": 1,
+      "day_number": 4
+    },
+    {
+      "id": 5,
+      "schedule_id": 1,
+      "day_number": 5
+    },
+    {
+      "id": 6,
+      "schedule_id": 1,
+      "day_number": 6
+    },
+    {
+      "id": 7,
+      "schedule_id": 2,
+      "day_number": 1
+    },
+    {
+      "id": 8,
+      "schedule_id": 2,
+      "day_number": 2
+    },
+    {
+      "id": 9,
+      "schedule_id": 2,
+      "day_number": 3
+    },
+    {
+      "id": 10,
+      "schedule_id": 2,
+      "day_number": 4
+    },
+    {
+      "id": 11,
+      "schedule_id": 2,
+      "day_number": 5
+    },
+    {
+      "id": 12,
+      "schedule_id": 2,
+      "day_number": 6
+    },
+    {
+      "id": 13,
+      "schedule_id": 3,
+      "day_number": 1
+    },
+    {
+      "id": 14,
+      "schedule_id": 3,
+      "day_number": 2
+    },
+    {
+      "id": 15,
+      "schedule_id": 3,
+      "day_number": 3
+    },
+    {
+      "id": 16,
+      "schedule_id": 3,
+      "day_number": 4
+    }
+  ],
+
+  "scheduleItems": [
+    {
+      "id": 1,
+      "schedule_day_id": 1,
+      "destination_id": 1,
+      "order_in_day": 1,
+      "estimated_transport_time": 180,
+      "estimated_cost": 500000
+    },
+    {
+      "id": 2,
+      "schedule_day_id": 2,
+      "destination_id": 1,
+      "order_in_day": 1,
+      "estimated_transport_time": 60,
+      "estimated_cost": 300000
+    },
+    {
+      "id": 3,
+      "schedule_day_id": 3,
+      "destination_id": 3,
+      "order_in_day": 1,
+      "estimated_transport_time": 240,
+      "estimated_cost": 400000
+    },
+    {
+      "id": 4,
+      "schedule_day_id": 4,
+      "destination_id": 3,
+      "order_in_day": 1,
+      "estimated_transport_time": 120,
+      "estimated_cost": 350000
+    },
+    {
+      "id": 5,
+      "schedule_day_id": 5,
+      "destination_id": 3,
+      "order_in_day": 1,
+      "estimated_transport_time": 60,
+      "estimated_cost": 200000
+    },
+    {
+      "id": 6,
+      "schedule_day_id": 6,
+      "destination_id": 3,
+      "order_in_day": 1,
+      "estimated_transport_time": 300,
+      "estimated_cost": 450000
+    },
+    {
+      "id": 7,
+      "schedule_day_id": 7,
+      "destination_id": 2,
+      "order_in_day": 1,
+      "estimated_transport_time": 150,
+      "estimated_cost": 350000
+    },
+    {
+      "id": 8,
+      "schedule_day_id": 8,
+      "destination_id": 2,
+      "order_in_day": 1,
+      "estimated_transport_time": 60,
+      "estimated_cost": 200000
+    },
+    {
+      "id": 9,
+      "schedule_day_id": 9,
+      "destination_id": 6,
+      "order_in_day": 1,
+      "estimated_transport_time": 120,
+      "estimated_cost": 300000
+    },
+    {
+      "id": 10,
+      "schedule_day_id": 10,
+      "destination_id": 6,
+      "order_in_day": 1,
+      "estimated_transport_time": 60,
+      "estimated_cost": 250000
+    },
+    {
+      "id": 11,
+      "schedule_day_id": 11,
+      "destination_id": 7,
+      "order_in_day": 1,
+      "estimated_transport_time": 180,
+      "estimated_cost": 400000
+    },
+    {
+      "id": 12,
+      "schedule_day_id": 12,
+      "destination_id": 7,
+      "order_in_day": 1,
+      "estimated_transport_time": 60,
+      "estimated_cost": 250000
+    },
+    {
+      "id": 13,
+      "schedule_day_id": 13,
+      "destination_id": 5,
+      "order_in_day": 1,
+      "estimated_transport_time": 240,
+      "estimated_cost": 1200000
+    },
+    {
+      "id": 14,
+      "schedule_day_id": 14,
+      "destination_id": 5,
+      "order_in_day": 1,
+      "estimated_transport_time": 60,
+      "estimated_cost": 500000
+    },
+    {
+      "id": 15,
+      "schedule_day_id": 15,
+      "destination_id": 5,
+      "order_in_day": 1,
+      "estimated_transport_time": 90,
+      "estimated_cost": 600000
+    },
+    {
+      "id": 16,
+      "schedule_day_id": 16,
+      "destination_id": 5,
+      "order_in_day": 1,
+      "estimated_transport_time": 240,
+      "estimated_cost": 1000000
+    }
+  ],
+
+  "budgetItems": [
+    {
+      "id": 1,
+      "schedule_id": 1,
+      "category": "accommodation",
+      "amount": 6000000
+    },
+    {
+      "id": 2,
+      "schedule_id": 1,
+      "category": "food",
+      "amount": 4000000
+    },
+    {
+      "id": 3,
+      "schedule_id": 1,
+      "category": "transport",
+      "amount": 3500000
+    },
+    {
+      "id": 4,
+      "schedule_id": 1,
+      "category": "other",
+      "amount": 1500000
+    },
+    {
+      "id": 5,
+      "schedule_id": 2,
+      "category": "accommodation",
+      "amount": 7000000
+    },
+    {
+      "id": 6,
+      "schedule_id": 2,
+      "category": "food",
+      "amount": 5000000
+    },
+    {
+      "id": 7,
+      "schedule_id": 2,
+      "category": "transport",
+      "amount": 4000000
+    },
+    {
+      "id": 8,
+      "schedule_id": 2,
+      "category": "other",
+      "amount": 2000000
+    },
+    {
+      "id": 9,
+      "schedule_id": 3,
+      "category": "accommodation",
+      "amount": 5000000
+    },
+    {
+      "id": 10,
+      "schedule_id": 3,
+      "category": "food",
+      "amount": 2500000
+    },
+    {
+      "id": 11,
+      "schedule_id": 3,
+      "category": "transport",
+      "amount": 2000000
+    },
+    {
+      "id": 12,
+      "schedule_id": 3,
+      "category": "other",
+      "amount": 500000
+    }
+  ],
+
+  "ratings": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "destination_id": 1,
+      "rating": 5,
+      "comment": "Vịnh Hạ Long thật sự tuyệt vời, cảnh quan đẹp và dịch vụ tốt.",
+      "created_at": "2025-01-15T08:30:00Z"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "destination_id": 1,
+      "rating": 4,
+      "comment": "Phong cảnh rất đẹp nhưng hơi đông du khách.",
+      "created_at": "2025-02-20T14:15:00Z"
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "destination_id": 1,
+      "rating": 5,
+      "comment": "Trải nghiệm tuyệt vời, đáng để quay lại lần nữa.",
+      "created_at": "2025-03-10T10:45:00Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "destination_id": 2,
+      "rating": 5,
+      "comment": "Hội An có không khí cổ kính và ẩm thực tuyệt vời.",
+      "created_at": "2025-01-25T09:20:00Z"
+    },
+    {
+      "id": 5,
+      "user_id": 2,
+      "destination_id": 2,
+      "rating": 5,
+      "comment": "Phố cổ Hội An rất đáng để ghé thăm, đặc biệt vào buổi tối với những chiếc đèn lồng.",
+      "created_at": "2025-02-28T18:30:00Z"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "destination_id": 3,
+      "rating": 4,
+      "comment": "Sapa có khung cảnh tuyệt đẹp nhưng thời tiết khá lạnh.",
+      "created_at": "2025-03-05T16:45:00Z"
+    },
+    {
+      "id": 7,
+      "user_id": 3,
+      "destination_id": 4,
+      "rating": 5,
+      "comment": "Đà Lạt thật sự là thiên đường nghỉ dưỡng với khí hậu mát mẻ.",
+      "created_at": "2025-01-08T11:10:00Z"
+    },
+    {
+      "id": 8,
+      "user_id": 2,
+      "destination_id": 5,
+      "rating": 4,
+      "comment": "Phú Quốc có bãi biển đẹp và hải sản tươi ngon nhưng giá cả hơi cao.",
+      "created_at": "2025-04-12T13:25:00Z"
+    },
+    {
+      "id": 9,
+      "user_id": 3,
+      "destination_id": 6,
+      "rating": 4,
+      "comment": "Huế có nhiều di tích lịch sử và ẩm thực đặc sắc.",
+      "created_at": "2025-02-15T12:40:00Z"
+    },
+    {
+      "id": 10,
+      "user_id": 1,
+      "destination_id": 7,
+      "rating": 4,
+      "comment": "Nha Trang có bãi biển đẹp và nhiều hoạt động giải trí thú vị.",
+      "created_at": "2025-03-20T15:50:00Z"
+    }
+  ],
+
+  "statistics": [
+    {
+      "destination_id": 1,
+      "total_visits": 25,
+      "average_rating": 4.8,
+      "total_reviews": 15,
+      "most_popular_month": "07"
+    },
+    {
+      "destination_id": 2,
+      "total_visits": 30,
+      "average_rating": 4.9,
+      "total_reviews": 18,
+      "most_popular_month": "03"
+    },
+    {
+      "destination_id": 3,
+      "total_visits": 20,
+      "average_rating": 4.7,
+      "total_reviews": 12,
+      "most_popular_month": "11"
+    },
+    {
+      "destination_id": 4,
+      "total_visits": 22,
+      "average_rating": 4.6,
+      "total_reviews": 14,
+      "most_popular_month": "12"
+    },
+    {
+      "destination_id": 5,
+      "total_visits": 18,
+      "average_rating": 4.5,
+      "total_reviews": 10,
+      "most_popular_month": "01"
+    },
+    {
+      "destination_id": 6,
+      "total_visits": 15,
+      "average_rating": 4.4,
+      "total_reviews": 8,
+      "most_popular_month": "02"
+    },
+    {
+      "destination_id": 7,
+      "total_visits": 28,
+      "average_rating": 4.3,
+      "total_reviews": 16,
+      "most_popular_month": "08"
+    }
+  ]
+}
