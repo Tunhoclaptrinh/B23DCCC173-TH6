@@ -207,4 +207,5 @@ export enum ECategoryBudget {
 	SHOPPING = 'shopping',
 	ACTIVITIES = 'activities',
 	OTHER = 'other',
+	MISCELLANEOUS = 'MISCELLANEOUS',
 }

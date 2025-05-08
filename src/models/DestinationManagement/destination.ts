@@ -7,12 +7,12 @@ export default () => {
 
 	// Load destination data from localStorage or initialize with mock data (dữ liệu giả)
 	const getDestinationData = () => {
-		const localData = localStorage.getItem('detinations');
+		const localData = localStorage.getItem('destinations');
 		if (localData) {
 			setDestinations(JSON.parse(localData));
 		} else {
 			const initialData = getMockDestinations();
-			localStorage.setItem('detinations', JSON.stringify(initialData));
+			localStorage.setItem('destinations', JSON.stringify(initialData));
 			setDestinations(initialData);
 		}
 	};
@@ -33,7 +33,7 @@ export default () => {
 		};
 
 		const updatedDestinations = [destinationWithId, ...destinations];
-		localStorage.setItem('classrooms', JSON.stringify(updatedDestinations));
+		localStorage.setItem('destinations', JSON.stringify(updatedDestinations));
 		setDestinations(updatedDestinations);
 		message.success('Destination added successfully!');
 		return true;
@@ -54,7 +54,7 @@ export default () => {
 
 		localStorage.setItem('destinations', JSON.stringify(updatedDestinations));
 		setDestinations(updatedDestinations);
-		message.success('Classroom updated successfully!');
+		message.success('Destination updated successfully!');
 		return true;
 	};
 
@@ -64,8 +64,6 @@ export default () => {
 		localStorage.setItem('destinations', JSON.stringify(updatedDestinations));
 		setDestinations(updatedDestinations);
 		message.success('Destination deleted successfully!');
-		return true;
-		message.success('Classroom deleted successfully!');
 		return true;
 	};
 

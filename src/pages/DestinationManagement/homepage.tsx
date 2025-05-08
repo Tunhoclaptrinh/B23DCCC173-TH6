@@ -23,7 +23,7 @@ const { Title, Text, Paragraph } = Typography;
 const { Meta } = Card;
 const { Option } = Select;
 
-const DestinationManagement: React.FC = () => {
+const DestinationHomePage: React.FC = () => {
 	const { destinations, getDestinationData } = useModel('DestinationManagement.destination');
 	const [loading, setLoading] = useState(true);
 
@@ -241,7 +241,7 @@ const DestinationManagement: React.FC = () => {
 												<Col span={12}>
 													<div style={{ display: 'flex', alignItems: 'center' }}>
 														<DollarOutlined style={{ marginRight: 4 }} />
-														<Text type='secondary'>{formatCurrency(getTotalCost(destination) / 1000000)}M</Text>
+														<Text type='secondary'>{getTotalCost(destination) / 1000000}M</Text>
 													</div>
 												</Col>
 											</Row>
@@ -270,4 +270,4 @@ const DestinationManagement: React.FC = () => {
 	);
 };
 
-export default DestinationManagement;
+export default DestinationHomePage;

@@ -27,6 +27,7 @@ declare module DestinationManagement {
 		start_date: string;
 		end_date: string;
 		total_budget: number;
+		status: 'planned' | 'completed' | 'cancelled';
 	}
 	export interface ScheduleDays {
 		id: string;

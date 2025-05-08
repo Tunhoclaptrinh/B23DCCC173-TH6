@@ -52,7 +52,8 @@ export const getMockDestinations = (): DestinationManagement.Destination[] => {
 			description:
 				'Sapa is a town in the Hoàng Liên Son Mountains of northwestern Vietnam. It is known for its terraced rice fields and hiking trails.',
 			type: EDestinationType.MOUNTAIN,
-			image_url: '/api/placeholder/800/500',
+			image_url:
+				'https://vcdn1-dulich.vnecdn.net/2022/04/18/dulichSaPa-1650268886-1480-1650277620.png?w=0&h=0&q=100&dpr=2&fit=crop&s=JTUw8njZ_Glkqf1itzjObg',
 			location: 'Sapa',
 			avg_rating: 4.5,
 			avg_food_cost: 250000,
@@ -66,7 +67,8 @@ export const getMockDestinations = (): DestinationManagement.Destination[] => {
 			description:
 				"Hoi An is a city on Vietnam's central coast known for its well-preserved Ancient Town, cut through with canals.",
 			type: EDestinationType.HISTORICAL,
-			image_url: '/api/placeholder/800/500',
+			image_url:
+				'https://vcdn1-dulich.vnecdn.net/2022/04/18/dulichSaPa-1650268886-1480-1650277620.png?w=0&h=0&q=100&dpr=2&fit=crop&s=JTUw8njZ_Glkqf1itzjObg',
 			location: 'Da Nang',
 			avg_rating: 4.7,
 			avg_food_cost: 200000,
@@ -80,7 +82,8 @@ export const getMockDestinations = (): DestinationManagement.Destination[] => {
 			description:
 				'Da Nang is a coastal city in central Vietnam known for its sandy beaches and history as a French colonial port.',
 			type: EDestinationType.CITY,
-			image_url: '/api/placeholder/800/500',
+			image_url:
+				'https://vcdn1-dulich.vnecdn.net/2022/06/03/cauvang-1654247842-9403-1654247849.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=Swd6JjpStebEzT6WARcoOA',
 			location: 'Da Nang',
 			avg_rating: 4.6,
 			avg_food_cost: 250000,
@@ -94,7 +97,8 @@ export const getMockDestinations = (): DestinationManagement.Destination[] => {
 			description:
 				'Phong Nha-Ke Bang National Park is known for its ancient limestone karsts and caves, including Phong Nha Cave.',
 			type: EDestinationType.NATURE,
-			image_url: '/api/placeholder/800/500',
+			image_url:
+				'https://nld.mediacdn.vn/291774122806476800/2024/11/18/dong-phong-nha-ke-bang-dep-den-choang-ngop-17319168370561406931222.jpg',
 			location: 'Phong Nha Caves',
 			avg_rating: 4.9,
 			avg_food_cost: 180000,
@@ -108,7 +112,7 @@ export const getMockDestinations = (): DestinationManagement.Destination[] => {
 			description:
 				'Nha Trang is a coastal resort city in southern Vietnam known for its beaches, diving sites and offshore islands.',
 			type: EDestinationType.BEACH,
-			image_url: '/api/placeholder/800/500',
+			image_url: 'https://holidaysvietnam.vn/wp-content/uploads/2023/06/nha-1-1179x800.jpg',
 			location: 'Nha Trang',
 			avg_rating: 4.3,
 			avg_food_cost: 220000,
@@ -122,22 +126,9 @@ export const getMockDestinations = (): DestinationManagement.Destination[] => {
 			description:
 				'Ho Chi Minh City (formerly Saigon) is the largest city in Vietnam, known for its French colonial landmarks and vibrant street life.',
 			type: EDestinationType.CITY,
-			image_url: '/api/placeholder/800/500',
+			image_url: 'https://xaydung.gov.vn/Images/editor/images/MOC/2023/Thang%207/07219a2.jpg',
 			location: 'Ho Chi Minh City',
 			avg_rating: 4.4,
-			avg_food_cost: 300000,
-			avg_transport_cost: 150000,
-			avg_accommodation_cost: 1100000,
-			estimated_visit_duration: 8,
-		},
-		{
-			id: generateUUID(),
-			name: 'Nhà AN LE',
-			description: 'haizzz',
-			type: EDestinationType.CITY,
-			image_url: '/api/placeholder/800/500',
-			location: 'Hai Phong City',
-			avg_rating: 2,
 			avg_food_cost: 300000,
 			avg_transport_cost: 150000,
 			avg_accommodation_cost: 1100000,
@@ -149,7 +140,7 @@ export const getMockDestinations = (): DestinationManagement.Destination[] => {
 			description:
 				'Hue is a city in central Vietnam that was the seat of Nguyen Dynasty emperors and the national capital from 1802 to 1945.',
 			type: EDestinationType.HISTORICAL,
-			image_url: '/api/placeholder/800/500',
+			image_url: 'https://booking.muongthanh.com/upload_images/images/H%60/kham-pha-hue-mong-mo.jpg',
 			location: 'Hue City',
 			avg_rating: 4.2,
 			avg_food_cost: 180000,
@@ -170,6 +161,7 @@ export const getMockSchedules = (): DestinationManagement.Schedule[] => {
 			start_date: '2023-10-15',
 			end_date: '2023-10-20',
 			total_budget: 10000000, // 10 million VND
+			status: 'planned',
 		},
 	];
 };
