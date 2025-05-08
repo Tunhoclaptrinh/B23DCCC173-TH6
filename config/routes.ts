@@ -20,7 +20,13 @@ export default [
 
 	///////////////////////////////////
 	// DEFAULT MENU
-
+	// Ngọc code v1
+	{
+		path: '/home',
+		name: 'Home',
+		component: './DuLich/Home',
+	},
+	// cả team code
 	{
 		path: '/destination-management',
 		name: 'Destination',
