@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Layout, Row, Col, Card, Rate, Select, Slider, Space } from 'antd';
 import { useModel } from 'umi';
 import './style.less'; 
+import { DestinationType } from '@/services/DuLich/constant';
 
 const { Header, Content, Footer } = Layout;
 const { Meta } = Card;
@@ -24,9 +25,12 @@ const HomePage: React.FC = () => {
             onChange={value => setCategoryFilter(value)}
             style={{ width: 150 }}
           >
-            <Option value="biển">Biển</Option>
-            <Option value="núi">Núi</Option>
-            <Option value="thành phố">Thành phố</Option>
+          {Object.entries(DestinationType).map(([key, value]) => (
+              <Option key={key} value={value}>
+                {value}
+              </Option>
+          ))}
+
           </Select>
 
           <span>Giá:</span>
@@ -64,11 +68,10 @@ const HomePage: React.FC = () => {
                 <Rate disabled defaultValue={dest.avg_rating} allowHalf style={{ marginTop: 8 }} />
               </Card>
             </Col>
-          ))}
+          ))} 
         </Row>
       </Content>
 
-      <Footer className="home-footer">© 2025 Du Lịch Việt Nam</Footer>
     </Layout>
   );
 };
