@@ -180,6 +180,35 @@ export default [
 		],
 	},
 
+	{
+		path: '/destination-management',
+		name: 'Destination',
+		icon: 'InsertRowRightOutlined',
+		routes: [
+			{
+				path: '/destination-management/dashboard',
+				name: 'Home',
+				component: './DestinationManagement/homepage',
+			},
+			{
+				path: '/destination-management/destination',
+				name: 'Class Room',
+				// component: './DestinationManagement',
+			},
+			{
+				path: '/destination-management/1',
+				name: 'Un Available',
+				// component: "./DiplomaManagement/DiplomaInformationManagement",
+			},
+
+			{
+				path: '/destination-management/2',
+				name: 'Un Available',
+				// component: "./DiplomaManagement/DiplomaFieldTemplateManagement",
+			},
+		],
+	},
+
 	// Thực hành 05
 	{
 		path: '/club-management',
