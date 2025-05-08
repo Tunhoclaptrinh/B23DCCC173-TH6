@@ -1,4 +1,6 @@
-﻿export default [
+﻿// import AppointmentScheduler from '@/components/ServiceManagementComponent/AppointmentScheduler';
+
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -18,38 +20,50 @@
 
 	///////////////////////////////////
 	// DEFAULT MENU
-	{
-		path: '/dashboard',
-		name: 'Dashboard',
-		component: './TrangChu',
-		icon: 'HomeOutlined',
-	},
-	{
-		path: '/gioi-thieu',
-		name: 'About',
-		component: './TienIch/GioiThieu',
-		hideInMenu: true,
-	},
-	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
-	},
 
-	// DANH MUC HE THONG
 	{
-		name: 'Dulich',
-		path: '/danh-muc',
-		icon: 'copy',
+		path: '/destination-management',
+		name: 'Destination',
+
+		icon: 'InsertRowRightOutlined',
 		routes: [
 			{
+				path: '/destination-management/destination',
 				name: 'Home',
-				path: 'home',
-				component: './DuLich/Home',
+				component: './DestinationManagement/homepage',
+			},
+			{
+				path: '/destination-management/schedule-manage',
+				name: 'Schedule manage',
+				component: './DestinationManagement/schedulemanage',
+			},
+			{
+				path: '/destination-management/budget',
+				name: 'Budget manage',
+				component: './DestinationManagement/budgetmanage',
+			},
+
+			{
+				path: '/destination-management/admin',
+				name: 'CRUD - Destination',
+				component: './DestinationManagement/admin',
 			},
 		],
 	},
+
+	// DANH MUC HE THONG
+	// {
+	// 	name: 'DanhMuc',
+	// 	path: '/danh-muc',
+	// 	icon: 'copy',
+	// 	routes: [
+	// 		{
+	// 			name: 'ChucVu',
+	// 			path: 'chuc-vu',
+	// 			component: './DanhMuc/ChucVu',
+	// 		},
+	// 	],
+	// },
 
 	{
 		path: '/notification',
