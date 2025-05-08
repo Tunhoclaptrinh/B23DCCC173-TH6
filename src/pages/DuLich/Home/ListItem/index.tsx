@@ -33,3 +33,5 @@ const { filteredDestinations } = useModel('dulich.diemden');
 };
 
 export default TourList;
+
+
