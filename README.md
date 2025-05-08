@@ -9,6 +9,34 @@
 
 This project is initialized with [Web Base](https://pro.ant.design). Follow is the quick guide for how to use.
 
+## Hình ảnh Demo
+
+Dưới đây là một số hình ảnh demo của ứng dụng:
+
+![Image 1](./public/img/image1.png)
+*demo*
+
+![Image 2](./public/img/image2.png)
+*demo*
+
+![Image 3](./public/img/image3.png)
+*demo*
+
+![Image 4](./public/img/image4.png)
+*demo*
+
+![Image 5](./public/img/image5.png)
+*demo*
+
+![Image 6](./public/img/image6.png)
+*demo*
+
+![Image 7](./public/img/image7.png)
+*demo*
+
+![Image 8](./public/img/image8.png)
+*demo*
+
 ## Environment Prepare
 
 Install `node_modules`:
@@ -33,4 +61,3 @@ yarn start
 
 ```bash
 yarn build
-```
