@@ -256,27 +256,25 @@ const DestinationHomePage: React.FC = () => {
 									}
 								/>
 
-{/* xem chi tiết địa điểms */}
-<div
-        style={{
-            position: 'absolute',
-            top: '8px',
-            left: '8px',
-            backgroundColor: 'rgba(0, 0, 0, 0.6)',
-            padding: '7px 3px 7px 7px',
-            borderRadius: '8px',
-            color: '#fff',
-            fontSize: '12px',
-            lineHeight: '1.5',
-        }}
-        onClick={() => handleShowDestinationDetail(destination)} 
-      >
-        <Tooltip title="Xem chi tiết"> 
-          <InfoCircleOutlined style={{ marginRight: '4px' }} />
-        </Tooltip>
-    </div>
-
-
+							{/* xem chi tiết địa điểms */}
+								<div
+									style={{
+										position: 'absolute',
+										top: '8px',
+										left: '8px',
+										backgroundColor: 'rgba(0, 0, 0, 0.6)',
+										padding: '7px 3px 7px 7px',
+										borderRadius: '8px',
+										color: '#fff',
+										fontSize: '12px',
+										lineHeight: '1.5',
+									}}
+									onClick={() => handleShowDestinationDetail(destination)} 
+								>
+									<Tooltip title="Xem chi tiết"> 
+									<InfoCircleOutlined style={{ marginRight: '4px' }} />
+									</Tooltip>
+								</div>
 							</Card>
 						</Col>
 					))}
